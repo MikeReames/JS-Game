@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Game Challenge</title>
+    <link rel="style" href="style.css">
+</head>
+<body>
+    <audio id="myAudio">
+        <source src="Pacman-death-sound.mp3">
+        Your broswer does not support the audio element.
+    </audio>
+    <div>
+        <h1>My JS Game</h1>
+        <div id="reset-container">
+            <button id="reset-button" onclick="playAudio()">RESET</button><br>
+            NUMBER OF RESETS: <span id="num-resets">0</span>
+        <script>
+        var x = document.getElementById("myAudio")
+        function playAudio() {
+            x.play();
+        }
+        </script>
+        </div>
+        <div class="clear"></div>
+        <div class="left">
+            <h2>
+                Team 1
+            </h2>
+            <div class="goals">
+                SHOTS TAKEN: <span id="teamone-numshots">0</span><br>
+                GOALS: <span id="teamone-numgoals">0</span>
+            </div>
+            <div>
+                <button id="teamone-shoot-button">SHOOT</button>
+            </div>
+        </div>
+        <div class="right">
+            <h2>
+                Team 2
+            </h2>
+            <div class="goals">
+                SHOTS TAKEN: <span id="teamtwo-numshots">0</span><br>
+                GOALS: <span id="teamtwo-numgoals">0</span>
+            </div>
+            <div>
+                <button id="teamtwo-shoot-button">SHOOT</button>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <script src="assets/javascript/game.js"></script>
+</body>
+</html>
